@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاشة تسجيل الدخول</title>
+</head>
+<style>
+    body {
+        font-family: system-ui;
+    }
+
+    form {
+
+        width: 40%;
+        margin-left: 27%;
+        margin-top: 8%;
+        background-color: rgb(191, 210, 229);
+        direction: rtl;
+        padding: 30px;
+        border-radius: 25px;
+        box-shadow: 10px 16px rgb(142, 142, 245);
+
+    }
+
+    input {
+        font-size: 22px;
+        color: blue;
+        width: 80%;
+        height: 40px;
+        padding-right: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #submit {
+        width: 80%;
+        justify-content: space-between;
+        background-color: blue;
+        color: white;
+        font-size: 22px;
+        border-radius: 25px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    img {
+        height: 40px;
+
+    }
+
+    button {
+        margin: 40px;
+    }
+</style>
+
+<body>
+    <button onclick="closebtn()">
+        <img src="./imegs/off.png" alt="">
+    </button>
+    <form id="form" action="./home.html">
+        <img style="float: left;height:50px" src="./imegs/2.jpg" alt="">
+        <h1>شاشة الدخول</h1>
+
+        <hr>
+        <input type="text" id="fname" name="fname" placeholder="ادخل اسم المستخدم"><br>
+        <input type="text" id="lname" name="lname" placeholder="ادخل كلمة المرور"><br><br>
+        <input id="submit" type="submit" value="دخول">
+
+    </form>
+
+
+</body>
+<script>
+    function closebtn() {
+        document.getElementById("form").style.display = "none"
+    }
+</script>
+
+</html>

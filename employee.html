@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموظفين</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    #saveEmp {
+        width: 50%;
+        margin: 5px 200px;
+        background-color: rgb(101, 248, 101);
+        color: rgb(0, 0, 0);
+        height: 50px;
+        font-size: 26px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+
+    #saveEmp:hover {
+        background-color: rgb(235, 70, 207);
+        color: white;
+        scale: 1.2;
+    }
+
+    #inputgroup {
+        width: 60%;
+        font-size: 29px;
+        display: flex;
+        direction: rtl;
+        margin-top: 3%;
+        margin-right: 100px;
+        margin-left: 18%;
+    }
+
+    #inputgroup input {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+
+    h2 {
+        text-decoration: underline;
+        margin-top: 5%;
+        color: black;
+        text-align: center;
+    }
+
+    #added img {
+        position: absolute;
+        top: 0;
+        height: 70px;
+        margin-left: 5px;
+
+    }
+
+    #added {
+        display: none;
+        background-color: rgb(178, 178, 235);
+    }
+
+    #firstbody {
+        display: block;
+    }
+</style>
+
+
+<body>
+    <div id="firstbody">
+        <div class="header">
+            <h4 style="color: rgb(222, 18, 45);">root مرحبا </h4>
+            <div id="navleft">
+                <button onclick="window.location.href='login.html'" style="border: none;">
+                    <img style="height: 30px;width:30px;margin-left:15px" src="./imegs/off.png">
+                </button>
+                <button onclick="window.location.href='hubs.html'" style="border: none;">
+                    <img style="height: 30px;width:30px;margin-left:15px" src="./imegs/mohaf.png">
+                </button>
+
+                <button onclick="window.location.href='reports.html'" style="border: none;">
+                    <img style="height: 30px;width:30px;margin-left:15px" src="./imegs/print.png">
+                </button>
+                <button onclick="window.location.href='setting.html'" style="border: none;">
+                    <img style="height: 30px;width:30px;margin-left:15px" src="./imegs/set.png">
+                </button>
+
+
+                <button onclick="window.location.href='counter.html'" style="border: none;">
+                    <img style="height: 30px;width:30px;margin-left:15px" src="./imegs/hesab.png">
+                </button>
+
+            </div>
+
+
+            <span>الرئيسية</span>
+            <button onclick="window.location.href='home.html'" style="border: none;">
+                <div id="homeicon">
+                    <img style="height: 40px;width:40px" src="./imegs/home.png">
+            </button>
+        </div>
+
+
+        <div style="margin-top: 50px;" class="continar">
+            <h1 style="margin-left: 45%;color:blue;text-decoration: underline;">بيانات الموظفين</h1>
+
+            <div id="empbtn">
+                <button>Excel</button>
+                <button>طباعة</button>
+                <button onclick="added()">إضافة</button>
+            </div>
+
+            <table id="emptable" class="table table-success table-striped-columns">
+
+                <tr>
+                    <th> حذف</th>
+                    <th> تعديل</th>
+                    <th>مؤمن عليه</th>
+                    <th>المرتب</th>
+                    <th>الفرع</th>
+                    <th>تاريخ التعيين</th>
+                    <th>الوظيفة</th>
+                    <th>الرقم القومي</th>
+                    <th>العنوان</th>
+                    <th>رقم التليفون</th>
+                    <th>الاسم</th>
+                    <th>الكود</th>
+                </tr>
+
+                <tbody id="tbody">
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+    <div id="added">
+        <h2>اضافة موظف جديد</h2>
+        <img src="./imegs/2.jpg" alt="">
+        <div id="inputgroup">
+
+            <div>
+                <input id="code" type="text" placeholder="الكود">
+                <input id="name" type="text" placeholder="الاسم">
+                <input id="phone" type="text" placeholder="رقم التليفون">
+                <textarea id="address" style="width: 77%;text-align:center;margin-bottom: 40px;" name="address"
+                    placeholder="العنوان"></textarea>
+                <input id="nid" type="text" placeholder="الرقم القومي">
+                <input id="job" type="text" placeholder="الوظيفة">
+                <input id="jobdate" type="text" placeholder="تاريخ التعيين">
+                <input id="hub" type="text" placeholder="الفرع">
+                <input id="salary" type="text" placeholder="المرتب">
+                <input id="insurance" type="text" placeholder="مؤمن عليه">
+                <button id="saveEmp">إضافة</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+
+</html>
